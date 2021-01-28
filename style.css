@@ -77,6 +77,27 @@ header {
   background: #49aa26;
   color: #fff;
 }
+
+/* Table =====*/
+#data-table {
+  width: 100%;
+}
+
+table th {
+  background: #fff;
+
+  font-weight: normal;
+  padding: 1rem 2rem;
+  text-align: left;
+  color: #969cb3;
+}
+
+table td {  
+  background: #fff;
+  border-spacing: 0 0.5rem;
+}
+
+
 /* Footer =====*/
 footer {
   text-align: center;
