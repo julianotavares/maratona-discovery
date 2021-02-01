@@ -71,6 +71,10 @@ const DOM = {
   `
   
   return html
+  },
+
+  updateBalance() {
+    document.querySelector
   }
 }
 
@@ -91,6 +95,8 @@ const Utils = {
 
   }
 }
+
+
 
 transactions.forEach(function(transaction) {
   DOM.addTransaction(transactions)
