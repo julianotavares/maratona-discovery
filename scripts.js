@@ -59,7 +59,7 @@ const DOM = {
   innerHTMLTransaction(transaction) {
     const CSSclass = transaction.amount > 0 ? "income" : "expense"
 
-    const amount = Utils.formatCurrency(transaction.amount)
+    const amount = Utils.formatCurrency(amount)
 
     const html = `
         <td class="description">${transaction.description}</td>
@@ -81,6 +81,13 @@ const Utils = {
     value = String(value).replace(/\D/g, "")
 
     value = Number(value) / 100
+
+    value = value.toLocaleString("pt-BR", {
+      style: "currency", 
+      currency: "BRL"
+    })
+
+    return signal + value
 
   }
 }
