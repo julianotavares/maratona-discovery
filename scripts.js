@@ -74,7 +74,14 @@ const DOM = {
   },
 
   updateBalance() {
-    document.querySelector
+    document.getElementById('incomeDisplay')
+    .innerHTML = "Soma entradas"
+
+    document.getElementById('expenseDisplay')
+    .innerHTML = "Soma entradas"
+
+    document.getElementById('totalDisplay')
+    .innerHTML = "Soma entradas"
   }
 }
 
@@ -101,3 +108,5 @@ const Utils = {
 transactions.forEach(function(transaction) {
   DOM.addTransaction(transactions)
 })
+
+DOM.updateBalance()
