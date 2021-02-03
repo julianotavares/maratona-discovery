@@ -61,7 +61,7 @@ const Transaction = {
     return income;
   },
   total() {
-    // entradas menos saídas
+    return Transaction.income() + Transaction.expenses()
   }
 }
 
@@ -93,13 +93,13 @@ const DOM = {
 
   updateBalance() {
     document.getElementById('incomeDisplay')
-    .innerHTML = Transaction.incomes()
+    .innerHTML = Utils.formatCurrency(Transaction.incomes())
 
     document.getElementById('expenseDisplay')
-    .innerHTML = Transaction.expenses()
+    .innerHTML = Utils.formatCurrency(Transaction.expenses())
 
     document.getElementById('totalDisplay')
-    .innerHTML = Transaction.total()
+    .innerHTML = Utils.formatCurrency(Transaction.total())
   }
 }
 
