@@ -37,7 +37,16 @@ const transactions = [
 
 const Transaction = {
   incomes() {
-    // somar as entradas
+    let income = 0;
+
+    transactions.forEach(transaction => {
+      if(transaction.amount > 0 ) {
+        income = income + transaction.amount;
+      }
+    })
+
+
+    return income
   },
   expenses() {
     // somar as saídas
@@ -75,13 +84,13 @@ const DOM = {
 
   updateBalance() {
     document.getElementById('incomeDisplay')
-    .innerHTML = "Soma entradas"
+    .innerHTML = Transaction.incomes()
 
     document.getElementById('expenseDisplay')
-    .innerHTML = "Soma entradas"
+    .innerHTML = Transaction.expenses()
 
     document.getElementById('totalDisplay')
-    .innerHTML = "Soma entradas"
+    .innerHTML = Transaction.total()
   }
 }
 
