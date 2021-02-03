@@ -41,15 +41,24 @@ const Transaction = {
 
     transactions.forEach(transaction => {
       if(transaction.amount > 0 ) {
-        income = income + transaction.amount;
+        income += transaction.amount;
       }
     })
 
 
-    return income
+    return income;
   },
   expenses() {
-    // somar as saídas
+    let expense = 0;
+
+    transactions.forEach(transaction => {
+      if(transaction.amount < 0 ) {
+        expense += transaction.amount;
+      }
+    })
+
+
+    return income;
   },
   total() {
     // entradas menos saídas
